@@ -2,55 +2,44 @@ const settings = {
   "name": "proalse",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://proalse.wildfreewalkingtours.com/",
       "title": "Test Frontity Blog",
       "description": "WordPress installation for Frontity development"
     }
   },
+
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "proalse",
+
       "state": {
         "theme": {
           "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+            ["About", "/"],
+            ["Products", "/products/"],
+            ["Contact", "/contact"]
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
+            "showOnList": true,
+            "showOnPost": true
+          },
+          // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
+          autoPrefetch: "hover"
         }
       }
     },
+
     {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "api": "https://proalse.wildfreewalkingtours.com/wp-json/",
         }
       }
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
+    "@frontity/html2react",
+    "@aamodtgroup/frontity-contact-form-7"
   ]
 };
 
